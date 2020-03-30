@@ -1,0 +1,169 @@
+% !Mode:: "TeX:UTF-8"
+\documentclass[12pt,UTF8]{ctexart}%{jmlr}%{ctexart}%{article}%
+
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{syntonly}
+\usepackage{ulem}
+%\syntaxonly
+%\usepackage[utf8]{inputenc}
+
+\title{Chapter 1. The introduction of \LaTeX}
+
+\begin{document}
+
+\section{Test}
+Hello this is a document content
+
+中文测试
+
+\begin{center}
+满纸荒唐言\\
+一把辛酸泪\\
+都云作者痴\\
+谁解其中味\\
+\end{center}
+
+\newpage
+\section{排版}
+1. 
+Several spaces equal one.
+Front spaces are ignored.
+An empty line starts a new
+paragraph.\par
+A \verb|\par| command also
+starts a new line.
+
+2. 
+\# \$ \% \& \{ \} \_
+\^{} \~{} \textbackslash
+
+3.连字\par
+It's difficult to find \ldots .\par
+It's dif{}f{}icult to f{}ind \ldots .
+
+4.标点\par
+``Please press the `x' key."\par
+daughter-in-law, X-rated\par
+pages 13--67\par
+yes---or no?\par
+one, two, three, \dots one hundred\par
+
+5.西文\par
+H\^otel, na\"\i ve, \'el\`eve,\par
+sm\o rrebr\o d, !`Se\ norita!,\par
+Sch\"onbrunner Schlo\ss{}\par
+Stra\ss e
+
+6.其他符号\par
+\P{} \S{} \dag{} \ddag{}\
+\copyright{} \pounds{}\
+\textasteriskcentered\
+\textperiodcentered\
+\textbullet\
+\textregistered{} \texttrademark
+
+
+\newpage
+
+7.强调\par
+An \underline{underlined} text.\par
+An example of \uline{some long and underlined words.}\par
+
+Some \emph{emphasized words,
+including \emph{double-emphasized}
+words}, are shown here.
+
+
+8.单词间距和断行\par
+Fig.~2a. \~{}不断行空格\\
+Donale~E. Knuth
+
+9.手动断词\par
+You can find some long text break new line. I think this is: su\-per\-cal\-%
+i\-frag\-i\-lis\-tic\-ex\-pi\-%
+al\-i\-do\-cious.
+
+
+\newpage
+\section{文档元素}
+
+1. 标题\par
+\textbackslash chapter\{title\} \textbackslash section\{title\} \textbackslash subsection\{title\}
+\textbackslash subsubsection\{title\} \textbackslash paragraph\{title\} \textbackslash subparagraph\{title\}
+
+
+2.引用\par
+A reference to this subsection
+\label{sec:this} looks like:
+``see section~\ref{sec:this} on
+page~\pageref{sec:this}.''
+
+3.脚注\par
+“天地玄黄，宇宙洪荒。日月盈昃，辰宿列张。”\footnote{出自《千字文》。}\par
+\par
+\begin{tabular}{l}
+\hline
+“天地玄黄，宇宙洪荒。日月盈昃，辰宿列张。”\footnotemark \\
+\hline
+\end{tabular}
+\footnotetext{表格里的名句出自《千字文》。} \par
+
+\marginpar{\footnotesize 边注较窄，不要写过多文字，最好设置较小的字号。}
+
+4.列表\par
+\begin{enumerate}
+\item An item.
+\begin{enumerate}
+\item A nested item.\label{itref}
+\item[*] A starred item.
+\end{enumerate}
+\item Reference(\ref{itref}).
+\end{enumerate}\par
+
+
+\begin{itemize}
+\item An item.
+\begin{itemize}
+\item A nested item.
+\item[+] A `plus' item.
+\item Another item.
+\end{itemize}
+\item Go back to upper level.
+\end{itemize}
+
+
+
+\begin{description}
+\item[Enumerate] Numbered list.
+\item[Itemize] Non-numbered list.
+\end{description}
+
+
+
+
+\renewcommand{\labelitemi}{\ddag}
+\renewcommand{\labelitemii}{\dag}
+\begin{itemize}
+\item First item
+\begin{itemize}
+\item Subitem
+\item Subitem
+\end{itemize}
+\item Second item
+\end{itemize}
+
+
+
+\renewcommand{\labelenumi}%
+{\Alph{enumi}\>}
+\begin{enumerate}
+\item First item
+\item Second item
+\end{enumerate}
+
+
+
+5. 对齐环境\par
+
+\end{document}

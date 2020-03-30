@@ -1,0 +1,60 @@
+%指示样式模板 % 17pt,twoside,a4paper
+\documentclass[wcp,10pt]{jmlr} 
+
+%引用的宏包
+\usepackage{longtable}
+\usepackage{booktabs}
+% \usepackage{tabularx, makecell, multirow}
+\usepackage{syntonly} %可令 LATEX 编译后不生成 DVI 或者 PDF 文档，只排查错误，
+% \syntaxonly %如果想生成文档，则用 % 注释掉 \syntaxonly 命令即可。
+
+%文章名
+\title[]{Full Title of Article*
+\thanks{The content of thanks.}}
+
+%作者、邮箱以及地址，其中'\\'为换行
+  \author{\Name{Author Name1} \Email{abc@sample.com}\\
+  \addr Address 1
+  \AND
+  \Name{Author Name2} \Email{xyz@sample.com}\\
+  \addr Address 2
+ }
+
+%文档开始
+\begin{document}
+
+%摘要部分
+\begin{abstract}
+This is the abstract for this article.balabala...
+\end{abstract}
+
+%关键词
+\begin{keywords}
+List of keywords
+\end{keywords}
+
+\section{First Class Title} %一级标题
+Latex \footnote{Latex is a good software\label{latex}} is a good software.
+
+\begin{center}
+  \begin{tabular}{p{1\textwidth}}
+    \toprule
+       Cambodian ruling party wins majority vote in election: \\
+    \midrule
+       \textbf{Step 1}: The ruling Cambodian People's Party (CPP) of Prime Minister Samdech Techo Hun Sen won a majority vote in the general election on Sunday, according to National Election Committee (NEC)'s preliminary results. \\
+       \textbf{Step 2}: "According to the NEC's preliminary results broadcast on the state-owned National Television of Cambodia, the votes that the people supported the CPP were over 80 percent," he told Xinhua. "Based on this percentage we received, the CPP wins not less than 100 seats in the National Assembly." \\
+       \textbf{Step 3}: Polls opened at 7:00 a.m. local time on Sunday and closed at 3:00 p.m. at all 22,967 polling stations across the kingdom. Around 6.88 million, or 82 percent, of the 8.38 million eligible voters cast their ballots in the election, according to NEC's updated statistics. \\
+       \textbf{Step 4}: A total of 20 political parties contested in the election, which was held to elect 125 lawmakers for the National Assembly.\\
+   \bottomrule
+  \end{tabular}
+\end{center}
+
+\subsection{Second Class Title} %二级标题
+Latex\textsuperscript{\ref{latex}}
+balabala...
+
+%参考文献文件名
+\bibliography{references}
+
+%文档结束
+\end{document}

@@ -1,0 +1,4 @@
+\documentclass{Latex/Ctex Start}
+\begin{document}
+hello latex
+\end{document}
